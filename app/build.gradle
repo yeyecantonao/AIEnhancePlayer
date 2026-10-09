@@ -20,7 +20,7 @@ android {
 
     buildTypes {
         debug {
-            isDebuggable = true
+            // debug 默认就是 debuggable=true，无需配置
         }
         release {
             minifyEnabled false
