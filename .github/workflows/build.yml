@@ -12,7 +12,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      # 新增这一行：给gradlew添加执行权限
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build APK
