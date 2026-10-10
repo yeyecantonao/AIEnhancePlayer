@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AIEnhancePlayer</string>
+    <string name="open_video">打开视频</string>
+    <string name="empty_tip">选择本地视频开始播放\n实时 AI 增强滤镜无需等待</string>
+    <string name="filter">滤镜</string>
+    <string name="export">增强导出</string>
+    <string name="filter_title">选择增强滤镜（实时生效）</string>
+    <string name="export_title">离线增强导出</string>
+    <string name="export_tip">将使用当前滤镜逐帧增强并重新编码，保存为本地新文件，可选择 2 倍超分放大。处理期间请保持本页面在前台。</string>
+    <string name="export_1x">原分辨率（快）</string>
+    <string name="export_2x">2 倍超分（慢，推荐 720p 及以下片源）</string>
+    <string name="exporting">正在增强导出… %1$d%%</string>
+    <string name="export_done">已保存：%1$s</string>
+    <string name="export_fail">导出失败：%1$s</string>
+    <string name="play">播放</string>
+    <string name="share">分享</string>
+    <string name="cancel">取消</string>
 </resources>
