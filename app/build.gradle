@@ -51,6 +51,6 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    // 如果代码里用到 FTP 功能才放开这行，否则保持注释
-    // implementation 'commons-net:commons-net:3.11.1'
+    // FTP 功能依赖（FtpFileManager.kt 在用，必须放开）
+    implementation 'commons-net:commons-net:3.11.1'
 }
