@@ -4,23 +4,20 @@ plugins {
 }
 
 android {
-    namespace 'com.ai.videoplayer'          // ⚠️ 改成你仓库实际 namespace
+    namespace 'com.ai.videoplayer'
     compileSdk 35
 
     defaultConfig {
-        applicationId 'com.ai.videoplayer'  // ⚠️ 改成你仓库实际包名
+        applicationId 'com.ai.videoplayer'
         minSdk 24
         targetSdk 35
         versionCode 1
         versionName '1.0'
-        ndk {
-            abiFilters 'arm64-v8a'
-        }
+        multiDexEnabled true
     }
 
     buildTypes {
         debug {
-            // debug 默认就是 debuggable=true，无需配置
         }
         release {
             minifyEnabled false
@@ -36,7 +33,7 @@ android {
         jvmTarget = '17'
     }
     buildFeatures {
-        viewBinding = true
+        viewBinding true
     }
 }
 
@@ -45,13 +42,14 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
 
-    // Media3 全套（播放 + 滤镜 + 导出）
     implementation 'androidx.media3:media3-exoplayer:1.5.1'
     implementation 'androidx.media3:media3-ui:1.5.1'
     implementation 'androidx.media3:media3-common:1.5.1'
     implementation 'androidx.media3:media3-effect:1.5.1'
     implementation 'androidx.media3:media3-transformer:1.5.1'
 
-    // 如果项目代码里用了 FTP 相关功能才需要这行；不用就删掉
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // 如果代码里用到 FTP 功能才放开这行，否则保持注释
     // implementation 'commons-net:commons-net:3.11.1'
 }
